@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js",
-    "dev": "nodemon index.js"
+    "dev": "forever -c 'nodemon --exitcrash' index.js"
   },
   "author": "Miqueias Penha <miqueiaspenha@gmail.com>",
   "license": "ISC",
@@ -16,8 +16,5 @@
     "express": "^4.17.1",
     "mysql2": "^1.7.0",
     "sequelize": "^5.19.1"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.10"
   }
 }
