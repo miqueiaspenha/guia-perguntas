@@ -1,0 +1,18 @@
+version: '3'
+services:
+  node:
+    build: .
+    command: npm run dev
+    ports:
+      - '8080:8080'
+    volumes:
+      - .:/user/app
+    links: 
+      - mysql
+  mysql:
+    image: mysql:5.7.34
+    ports: 
+      - '3306:3306'
+    environment:
+      - MYSQL_ROOT_PASSWORD=123456
+      - MYSQL_DATABASE=guiaperguntas
